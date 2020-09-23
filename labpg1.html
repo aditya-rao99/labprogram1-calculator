@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lab</title>
+        <style>
+            .title{
+                font-size: 24px;
+                background-color: black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+                width: 400px;
+                color: aqua;
+                border: solid black 2px;
+                position: relative;
+                left: 35%;   
+            }
+            body{
+                background-color: darkslategrey;
+            }
+            input[type="text"]{
+                border-radius: 10px;
+                text-align: right;
+                background-color: black;
+                color: rgb(0, 255, 34);
+                width: 400px;
+                height: 30px;
+                font-size: 20px;
+            }
+            input[type="button"]{
+                border-radius: 50px;
+                color: aqua;
+                background-color: black;
+                width: 70px;
+                height: 40px;
+                font-size: 20px;
+            }
+            table{
+                background-color:whitesmoke;
+                border-color: chartreuse;
+                width: 500px;
+                height: 300px;
+            }
+            .hh{
+                display: block;
+                margin:auto;
+            }
+            .hh1{
+                display: block;
+                margin:auto;
+            }
+            .hh1:hover{
+                color:rgb(226, 212, 12);
+                width: 80px;
+                height: 40px;
+                background-color: rgb(44, 7, 59);
+            }
+            .hh:hover{
+                color:rgb(226, 212, 12);
+                width: 80px;
+                height: 40px;
+                background-color: rgb(44, 7, 59);
+            }
+        </style>
+        <script>
+            function disp(val){
+                document.getElementById('txt').value+=val;
+            }
+            function clr(){
+                document.getElementById('txt').value=" ";
+            }
+            function calcu(){
+                let x=document.getElementById('txt').value;
+                let y=eval(x);
+                document.getElementById("txt").value=y;
+            }
+        </script>
+    </head>
+    <body>
+        <h2 style="color: floralwhite;"><center>ADITYA RAO</center></h1>
+        <h2 style="color: floralwhite;"><center>4su17cs002</center></h1>
+        <div class="title">Calculator</div>
+        <div class="title">SDM--Javascript lab program</div>
+        <table border="5" align="center">
+            <tr>
+                <td>
+                    <center>
+                        <input type="button" value="CE" onclick="clr()">
+                    </center>
+                </td>
+                <td colspan="3">
+                    <input type="text" id="txt">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="hh" value="+" onclick="disp('+')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="1" onclick="disp('1')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="2" onclick="disp('2')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="3" onclick="disp('3')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="hh" value="-" onclick="disp('-')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="4" onclick="disp('4')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="5" onclick="disp('5')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="6" onclick="disp('6')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="hh" value="*" onclick="disp('*')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="7" onclick="disp('7')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="8" onclick="disp('8')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="9" onclick="disp('9')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="hh" value="/" onclick="disp('/')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="." onclick="disp('.')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="0" onclick="disp('0')">
+                </td>
+                <td>
+                    <input type="button" class="hh1" value="=" onclick="calcu()">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
